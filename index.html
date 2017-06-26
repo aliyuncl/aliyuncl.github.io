@@ -256,6 +256,235 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/27/php-使用phpize增加扩展/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="承霖">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/touxiang.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="承霖的书房">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/06/27/php-使用phpize增加扩展/" itemprop="url">php-使用phpize增加扩展</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-27T07:30:50+08:00">
+                2017-06-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Linux下用phpize给PHP动态添加扩展</p>
+<p>使用php的常见问题是编译php时忘记添加某扩展，后来想添加扩展，但是因为安装php后又装了一些东西如PEAR等，不想删除目录重装，这里就需要用到phpize了。</p>
+<p>如我想增加bcmath扩展的支持，这是一个支持大整数计算的扩展。windows自带而且内置，linux“本类函数仅在 PHP 编译时配置了 –enable-bcmath 时可用”（引号内是手册中的话）</p>
+<p>注意,有些扩展需要和php的版本保持一致才可以的，所以下载php包时尽量保持和已安装的php包版本一致。比如，我安装的为php5.1.6，就下载php-5.1.6.tar.gz的包</p>
+<p>解压php-5.1.6.tar.gz包,进入里面的ext/bcmath目录,然后执行/usr/local/php/bin/phpize，（其实在PHP源码安装包里面进行，此处的路径不绝对，按自己的路径输入）phpize在php安装完以后会有这个命令的, 会发现当前目录下多了一些configure文件，然后再执行./configure命令即可.</p>
+<p><a href="http://blog.csdn.net/allens_zhou/article/details/8595285" target="_blank" rel="external">http://blog.csdn.net/allens_zhou/article/details/8595285</a></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/27/ubantu-dns/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="承霖">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/touxiang.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="承霖的书房">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/06/27/ubantu-dns/" itemprop="url">ubantu-dns</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-27T07:28:30+08:00">
+                2017-06-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>ubuntu reboot以后会自动清空/etc/resolv.conf<br>默认的内容则来自于/etc/resolvconf/resolv.conf.d/base，将要添加的内容配置在这个文件即可在每次重启服务的时候重置nameserver，如nameserver 192.168.1.2</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/25/centos7-2搭建k8s实践/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -874,7 +1103,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -887,7 +1116,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
