@@ -99,7 +99,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/06/25/centos7-2搭建k8s实践/index.html">
 <meta property="og:site_name" content="承霖的书房">
 <meta property="og:description" content="规划：192.168.182.141 minon1192.168.182.142 master192.168.182.143 minon2 集群安装部署： k8s集群组件：1、etcd 一个高可用的KV键值对存储和服务发现系统2、flannel 实现跨主机的容器网络的通信3、kube-apiserver 提供k8s集群的API调用4、kube-controller-manager 确保集群服务5、">
-<meta property="og:updated_time" content="2017-06-25T14:46:39.000Z">
+<meta property="og:updated_time" content="2017-06-26T12:43:21.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="centos7.2搭建k8s实践">
 <meta name="twitter:description" content="规划：192.168.182.141 minon1192.168.182.142 master192.168.182.143 minon2 集群安装部署： k8s集群组件：1、etcd 一个高可用的KV键值对存储和服务发现系统2、flannel 实现跨主机的容器网络的通信3、kube-apiserver 提供k8s集群的API调用4、kube-controller-manager 确保集群服务5、">
@@ -345,7 +345,8 @@
 <p>在每个node上（minon）配置/etc/kubernetes/kubelet<br>KUBELET_ADDRESS=”–address=0.0.0.0”<br>KUBELET_PORT=”–port=10250”<br>KUBELET_HOSTNAME=”–hostname-override=192.168.182.141” //修改成node IP<br>KUBELET_API_SERVER=”–api-servers=<a href="http://192.168.182.142:8080" target="_blank" rel="external">http://192.168.182.142:8080</a>“ //修改成master IP<br>KUBELET_POD_INFRA_CONTAINER=”–pod-infra-container-image=registry.access.redhat.com/rhel7/pod-infrastructure:latest”<br>KUBELET_ARGS=””</p>
 <p>在所有节点上面启动kube-proxy,kubelet,docker,flanneld<br>for SERVICES in kube-proxy kubelet docker flanneld;do systemctl restart $SERVICES;systemctl enable $SERVICES;systemctl status $SERVICES; done</p>
 <p>master上验证搭建成功<br>[root@142 ~]# kubectl get node<br>NAME              STATUS    AGE<br>192.168.182.141   Ready     55s<br>192.168.182.143   Ready     54s</p>
-<p>注：<br>vmware如何修改为静态IP？</p>
+<p>注：<br>vmware如何修改为静态IP？<br>1、在vmware里面，创建一个子网<br>2、在虚机里面选择这个子网<br>3、修改/etc/sysconfig/network-s…./ifcfg-ens<br>dhcp-&gt;static<br>IPADDR<br>GATEWAY<br>NETMASK<br>3.1 修改dns<br>4、systemctl restart network</p>
+<p>如何永久修改主机名centos7.2<br>hostnamectl set-hostname 141</p>
 
       
     </div>
