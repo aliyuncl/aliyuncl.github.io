@@ -324,7 +324,7 @@
       
         
           
-            <p>规划：<br>192.168.182.141 minon1<br>192.168.182.142 master<br>192.168.182.143 minon2</p>
+            <p>规划：<br>192.168.1.2 minon1<br>192.168.1.3 master<br>192.168.1.4 minon2</p>
 <p>集群安装部署：</p>
 <p>k8s集群组件：<br>1、etcd 一个高可用的KV键值对存储和服务发现系统<br>2、flannel 实现跨主机的容器网络的通信<br>3、kube-apiserver 提供k8s集群的API调用<br>4、kube-controller-manager 确保集群服务<br>5、kube-scheduler 调度容器，分配到Node<br>6、kubelet 在Node节点上按照配置文件中定义的容器规格启动容器<br>7、kube-proxy 提供网络代理服务</p>
 <p>确保所有机器上面安装<br>1、yum -y install epel-release<br>2、关闭防火墙，selinux，避免受到防火墙的影响</p>
@@ -336,7 +336,6 @@
 <h1 id="etcdctl-mk-atomic-io-network-config-‘-“Network”-”172-17-0-0-16”-’"><a href="#etcdctl-mk-atomic-io-network-config-‘-“Network”-”172-17-0-0-16”-’" class="headerlink" title="etcdctl mk /atomic.io/network/config ‘{“Network”:”172.17.0.0/16”}’"></a>etcdctl mk /atomic.io/network/config ‘{“Network”:”172.17.0.0/16”}’</h1><p>在minon1、2安装flannel、kubernetes-node<br>yum -y install flannel kubernetes-node</p>
 <p>修改/etc/kubernetes/config文件<br>KUBE_LOGTOSTDERR=”–logtostderr=true”<br>KUBE_LOG_LEVEL=”–v=0”<br>KUBE_ALLOW_PRIV=”–allow-privileged=false”<br>KUBE_MASTER=”–master=<a href="http://192.168.182.142:8080" target="_blank" rel="external">http://192.168.182.142:8080</a>“</p>
 <p>为flannel网路指定etcd服务，修改/etc/sysconfig/flanneld<br>FLANNEL_ETCD=”<a href="http://192.168.182.142:2379" target="_blank" rel="external">http://192.168.182.142:2379</a>“<br>FLANNEL_ETCD_KEY=”/atomic.io/network”</p>
-<p>修改/etc/kubernetes/config<br>KUBE_LOGTOSTDERR=”–logtostderr=true”<br>KUBE_LOG_LEVEL=”–v=0”<br>KUBE_ALLOW_PRIV=”–allow-privileged=false”<br>KUBE_MASTER=”–master=<a href="http://192.168.182.142：8080" target="_blank" rel="external">http://192.168.182.142：8080</a>“</p>
 <p>在每个node上（minon）配置/etc/kubernetes/kubelet<br>KUBELET_ADDRESS=”–address=0.0.0.0”<br>KUBELET_PORT=”–port=10250”<br>KUBELET_HOSTNAME=”–hostname-override=192.168.182.141” //修改成node IP<br>KUBELET_API_SERVER=”–api-servers=<a href="http://192.168.182.142:8080" target="_blank" rel="external">http://192.168.182.142:8080</a>“ //修改成master IP<br>KUBELET_POD_INFRA_CONTAINER=”–pod-infra-container-image=registry.access.redhat.com/rhel7/pod-infrastructure:latest”<br>KUBELET_ARGS=””</p>
 <p>在所有节点上面启动kube-proxy,kubelet,docker,flanneld<br>for SERVICES in kube-proxy kubelet docker flanneld;do systemctl restart $SERVICES;systemctl enable $SERVICES;systemctl status $SERVICES; done</p>
 <p>master上验证搭建成功<br>[root@142 ~]# kubectl get node<br>NAME              STATUS    AGE<br>192.168.182.141   Ready     55s<br>192.168.182.143   Ready     54s</p>
