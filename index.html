@@ -2,10 +2,8 @@
 
 
 
-  
 
-
-<html class="theme-next muse use-motion" lang="zh-Hans">
+<html class="theme-next muse" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -112,7 +110,7 @@
     scheme: 'Muse',
     sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
     fancybox: true,
-    motion: true,
+    motion: false,
     duoshuo: {
       userId: '0',
       author: '博主'
@@ -246,6 +244,130 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/28/swift总结第一课/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="承霖">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/touxiang.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="承霖的书房">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/06/28/swift总结第一课/" itemprop="url">swift总结第一课</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-28T19:48:29+08:00">
+                2017-06-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>背单词：gibberish 令人费解的<br>strike off 开发、发布<br>dimension 尺寸、面积<br>building block 积木<br>full blown 充分发挥的</p>
+<p>AppDelegate为整个应用的一个代理，提供程序启动、退出等类似监控的接口，所以也是一个object<br>所有的object都</p>
+<p>UIAlertController学习：</p>
+<p>@IBAction func showAlert(){<br>let alertController = UIAlertController(title: “a”,message: “a”,preferredStyle: .alert)</p>
+<p>let alertAction = UIAlertAction(title: “取消”,style: .cancel,handler:nil)<br>alertController.addAction(alertAction)<br>self.present(alertController,animated: true,completion: nil)</p>
+<p>@IBAction func showAlert(){} 是指创建一个IB与viewcontroller的联系，IBAction接func，IBOutlet接 变量，一般是weak</p>
+<p>警示框主要包括controller和action，分别用常量定义，然后再利用addAction的方法加入到controller，组成一个alert</p>
+<p>let alertController = UIAlertController(title: “a”,message: “a”,preferredStyle: .alert)<br>属性：title，message，preferredStyle（包括两种.alert，弹出对话框，.actionSheet,下部弹出对话框）</p>
+<p>let alertAction = UIAlertAction(title: “取消”,style: .cancel,handler:nil)<br>属性:title，style（包括常见的三种，cancel,default,destructure红色），handler:nil        //handler:nil</p>
+<p>alertController.addAction(alertAction)<br>对象.方法（参数），把action传入controller<br>然后self.present。。。。。</p>
+<p>注意：<br>1、具体展示的位置看传入的顺序<br>2、.alert超过2个action，就会变成上下模型，而不会是左右模型</p>
+<p>弹窗弹出输入框：<br>alertController.addTextField{(textField: UITextField!) -&gt; Void in<br>textField.placeholder = “your name:”<br>}<br>alertController.addTextField{(textField: UITextField!) -&gt; Void in<br>textField.placeholder = “password”<br>textField.isSecureTextEntry = true<br>}</p>
+<p>2秒钟以后关闭对话框<br>DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2){<br>self.presentedViewController?.dismiss(animated: false, completion: nil)<br>}</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
     
       
 
@@ -1103,7 +1225,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -1116,7 +1238,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -1212,12 +1334,7 @@
   
 
 
-  
 
-
-
-  
-  
 
 
 
@@ -1244,15 +1361,6 @@
 
   
   <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-  
-  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
-
-  
-  <script type="text/javascript" src="/lib/three/three.min.js"></script>
-
-  
-  <script type="text/javascript" src="/lib/three/three-waves.min.js"></script>
 
 
   
