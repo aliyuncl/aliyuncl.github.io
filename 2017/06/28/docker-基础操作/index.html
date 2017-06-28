@@ -75,7 +75,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="ubuntu," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -91,17 +91,16 @@
 
 
 
-<meta name="description" content="ubuntu reboot以后会自动清空/etc/resolv.conf默认的内容则来自于/etc/resolvconf/resolv.conf.d/base，将要添加的内容配置在这个文件即可在每次重启服务的时候重置nameserver，如nameserver 192.168.1.2">
-<meta name="keywords" content="ubuntu">
+<meta name="description" content="基本概念：网络：none、bridge、host,使用的是–network=host…来使用none:无网络bridge：网桥模式brctl show 可以看到当前host的网桥，可以看到当前网桥上挂载的虚拟网卡有哪些，默认情况下，都是挂载到docker0上面了。但注意网桥内看到的虚拟网卡名称和容器内部看到的不一样的，因为是通过veth pair的方式连接的，可以理解一根网线的两端。同时容器被被分">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ubantu-dns">
-<meta property="og:url" content="http://yoursite.com/2017/06/27/ubantu-dns/index.html">
+<meta property="og:title" content="docker-基础操作">
+<meta property="og:url" content="http://yoursite.com/2017/06/28/docker-基础操作/index.html">
 <meta property="og:site_name" content="承霖的书房">
-<meta property="og:description" content="ubuntu reboot以后会自动清空/etc/resolv.conf默认的内容则来自于/etc/resolvconf/resolv.conf.d/base，将要添加的内容配置在这个文件即可在每次重启服务的时候重置nameserver，如nameserver 192.168.1.2">
-<meta property="og:updated_time" content="2017-06-26T23:29:35.000Z">
+<meta property="og:description" content="基本概念：网络：none、bridge、host,使用的是–network=host…来使用none:无网络bridge：网桥模式brctl show 可以看到当前host的网桥，可以看到当前网桥上挂载的虚拟网卡有哪些，默认情况下，都是挂载到docker0上面了。但注意网桥内看到的虚拟网卡名称和容器内部看到的不一样的，因为是通过veth pair的方式连接的，可以理解一根网线的两端。同时容器被被分">
+<meta property="og:updated_time" content="2017-06-28T15:33:42.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ubantu-dns">
-<meta name="twitter:description" content="ubuntu reboot以后会自动清空/etc/resolv.conf默认的内容则来自于/etc/resolvconf/resolv.conf.d/base，将要添加的内容配置在这个文件即可在每次重启服务的时候重置nameserver，如nameserver 192.168.1.2">
+<meta name="twitter:title" content="docker-基础操作">
+<meta name="twitter:description" content="基本概念：网络：none、bridge、host,使用的是–network=host…来使用none:无网络bridge：网桥模式brctl show 可以看到当前host的网桥，可以看到当前网桥上挂载的虚拟网卡有哪些，默认情况下，都是挂载到docker0上面了。但注意网桥内看到的虚拟网卡名称和容器内部看到的不一样的，因为是通过veth pair的方式连接的，可以理解一根网线的两端。同时容器被被分">
 
 
 
@@ -129,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/06/27/ubantu-dns/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/06/28/docker-基础操作/"/>
 
 
 
 
 
-  <title>ubantu-dns | 承霖的书房</title>
+  <title>docker-基础操作 | 承霖的书房</title>
   
 
 
@@ -254,7 +253,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/27/ubantu-dns/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/28/docker-基础操作/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="承霖">
@@ -271,7 +270,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">ubantu-dns</h1>
+          <h1 class="post-title" itemprop="name headline">docker-基础操作</h1>
         
 
         <div class="post-meta">
@@ -283,8 +282,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-27T07:28:30+08:00">
-                2017-06-27
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-28T23:07:08+08:00">
+                2017-06-28
               </time>
             
 
@@ -302,7 +301,7 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a class="cloud-tie-join-count" href="/2017/06/27/ubantu-dns/#comments" itemprop="discussionUrl">
+                <a class="cloud-tie-join-count" href="/2017/06/28/docker-基础操作/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count join-count" itemprop="commentCount"></span>
                 </a>
               </span>
@@ -328,7 +327,14 @@
       
 
       
-        <p>ubuntu reboot以后会自动清空/etc/resolv.conf<br>默认的内容则来自于/etc/resolvconf/resolv.conf.d/base，将要添加的内容配置在这个文件即可在每次重启服务的时候重置nameserver，如nameserver 192.168.1.2</p>
+        <p>基本概念：<br>网络：none、bridge、host,使用的是–network=host…来使用<br>none:无网络<br>bridge：网桥模式<br>brctl show 可以看到当前host的网桥，可以看到当前网桥上挂载的虚拟网卡有哪些，默认情况下，都是挂载到docker0上面了。但注意网桥内看到的虚拟网卡名称和容器内部看到的不一样的，因为是通过veth pair的方式连接的，可以理解一根网线的两端。同时容器被被分配一个与网桥在一个子网下的IP地址（DHCP），能否指定IP呢？</p>
+<p>docker也可以自己建立网桥，docker network create –driver bridge,如何指定吗？<br>答：可以，docker network create –driver bridge –subnet III –gateway III</p>
+<p>指定网桥来创建虚机<br>docker network</p>
+<p>host：与主机公用网络的模式，但注意host使用过的端口docker就不能再使用了。</p>
+<p>镜像相关：<br>1、docker images，查询当前有多少镜像<br>bogon:blog alieric$ docker images<br>REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE<br>nginx               latest              958a7ae9e569        4 weeks ago         109 MB<br>bitnami/php-fpm     latest              86885793ee60        6 weeks ago         216 MB</p>
+<p>2、docker rmi imagesID，删除掉当前某个镜像</p>
+<p>容器相关<br>1、docker ps 正在运行的容器<br>2、docker ps -a，所有容器<br>bogon:blog alieric$ docker ps -a<br>CONTAINER ID        IMAGE               COMMAND                  CREATED              STATUS                          PORTS                NAMES<br>cf89077c66ed        nginx               “/bin/bash”              53 seconds ago       Exited (0) 10 seconds ago                            fervent_euler<br>7f5a6f6ded1b        nginx               “/bin/bash”              About a minute ago   Exited (0) About a minute ago                        gifted_thompson<br>0371d1fe39b0        nginx               “nginx -g ‘daemon …”   2 weeks ago          Exited (0) 2 weeks ago                               agitated_heyrovsky<br>fa996abdaff2        nginx               “–name mynginx”         2 weeks ago          Created                         0.0.0.0:80-&gt;80/tcp   frosty_knuth<br>59aba678060a        nginx               “/bin/bash”              2 weeks ago          Exited (0) 2 weeks ago                               ecstatic_goldberg</p>
+<p>created：已创建但未运行的容器<br>UP：正在运行<br>exited：运行但已经退出的容器<br>3、docker rm containerID，删除当前某个容器<br>4、docker rm $(docker ps -a)，删除所有，类比，docker rmi $(docker images)</p>
 
       
     </div>
@@ -356,12 +362,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/ubuntu/" rel="tag"># ubuntu</a>
-          
-        </div>
-      
 
       
       
@@ -371,8 +371,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/06/25/centos7-2搭建k8s实践/" rel="next" title="centos7.2搭建k8s实践">
-                <i class="fa fa-chevron-left"></i> centos7.2搭建k8s实践
+              <a href="/2017/06/28/swift总结第一课/" rel="next" title="swift总结第一课">
+                <i class="fa fa-chevron-left"></i> swift总结第一课
               </a>
             
           </div>
@@ -380,10 +380,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/06/27/php-使用phpize增加扩展/" rel="prev" title="php-使用phpize增加扩展">
-                php-使用phpize增加扩展 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
