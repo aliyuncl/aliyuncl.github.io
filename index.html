@@ -254,6 +254,125 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/29/swift总结第二课/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="承霖">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/touxiang.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="承霖的书房">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/06/29/swift总结第二课/" itemprop="url">swift总结第二课</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-29T21:42:19+08:00">
+                2017-06-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>英语单词：<br>stick  黏住，产生作用<br>cohesive  有黏力的，紧密结合的<br>multiple  多个的，重复的<br>hocus pocus 欺骗把戏</p>
+<p>@IBAction func sliderMoved(_ slider: UISlider){<br>currentValue = lroundf(slider.value)<br>}<br>slierMoved是method实现某种功能的functions，里面带了一个参数，这个参数连接到UISlider object上面去，当UISlider移动（触发）的时候，就会告诉view controlrer，我移动啦，slider里面包含着这个信息，但仅仅是在这个method才有用，属于local。</p>
+<p>变量lifetime：<br>1、global scope<br>2、instance scope 当你想要一个变量从不同的action event传递的时候，可以选择实例变量，比如currentValue<br>3、local scope</p>
+<p>新学方法：arc4random_uniform(100)，会随机生成0-99的随机数,注意类型，不同类型的数据不能进行 + ，需要用Int()来转换。<br>targetValue = 1 + Int(arc4random_uniform(100))</p>
+<p>\n 换行符号<br>() 转换成字符串的符号</p>
+<ul>
+<li>拼接字符串的符号</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/28/docker-基础操作/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -322,9 +441,10 @@
       
         
           
-            <p>基本概念：<br>网络：none、bridge、host,使用的是–network=host…来使用<br>none:无网络<br>bridge：网桥模式<br>brctl show 可以看到当前host的网桥，可以看到当前网桥上挂载的虚拟网卡有哪些，默认情况下，都是挂载到docker0上面了。但注意网桥内看到的虚拟网卡名称和容器内部看到的不一样的，因为是通过veth pair的方式连接的，可以理解一根网线的两端。同时容器被被分配一个与网桥在一个子网下的IP地址（DHCP），能否指定IP呢？</p>
-<p>docker也可以自己建立网桥，docker network create –driver bridge,如何指定吗？<br>答：可以，docker network create –driver bridge –subnet III –gateway III</p>
-<p>指定网桥来创建虚机<br>docker network</p>
+            <p>基本概念：<br>底层技术的实现：Cgroup和NameSpace，CPU、内存、IO的限制<br>内存：<br>-m指定内存限额<br>–memory-swap，限制内存+swap的限额，如果在创建时不指定–memory-swap，默认 memory：swap=1：1<br>CPU:<br>-c，–cpu-shares，限制cpu的使用权重，默认值是1024，注意只有在cpu资源紧张的情况下，才会按照这个比例来分配<br>IO:<br>–blkio-weight，设置的是</p>
+<p>网络：none、bridge、host,使用的是–network=host…来使用<br>none:无网络<br>bridge：网桥模式<br>brctl show 可以看到当前host的网桥，可以看到当前网桥上挂载的虚拟网卡有哪些，默认情况下，都是挂载到docker0上面了。但注意网桥内看到的虚拟网卡名称和容器内部看到的不一样的，因为是通过veth pair的方式连接的，可以理解一根网线的两端。同时容器被被分配一个与网桥在一个子网下的IP地址（DHCP），能否指定IP呢？</p>
+<p>docker也可以自己建立网桥，docker network create –driver bridge,如何指定吗？<br>答：可以，docker network create –driver bridge –subnet III –gateway III mynet</p>
+<p>指定网桥来创建虚机<br>docker run -ti –network=mynet,也可以指定IP  –ip=<br>注意：！！只有指定了subnet的网桥，才可以分配静态IP</p>
 <p>host：与主机公用网络的模式，但注意host使用过的端口docker就不能再使用了。</p>
 <p>镜像相关：<br>1、docker images，查询当前有多少镜像<br>bogon:blog alieric$ docker images<br>REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE<br>nginx               latest              958a7ae9e569        4 weeks ago         109 MB<br>bitnami/php-fpm     latest              86885793ee60        6 weeks ago         216 MB</p>
 <p>2、docker rmi imagesID，删除掉当前某个镜像</p>
@@ -1347,7 +1467,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-count">10</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
