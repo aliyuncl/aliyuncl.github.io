@@ -782,18 +782,14 @@
 
       
         
-          
-            <p>基本概念：<br>底层技术的实现：Cgroup和NameSpace，CPU、内存、IO的限制<br>内存：<br>-m指定内存限额<br>–memory-swap，限制内存+swap的限额，如果在创建时不指定–memory-swap，默认 memory：swap=1：1<br>CPU:<br>-c，–cpu-shares，限制cpu的使用权重，默认值是1024，注意只有在cpu资源紧张的情况下，才会按照这个比例来分配<br>IO:<br>–blkio-weight，设置的是</p>
-<p>网络：none、bridge、host,使用的是–network=host…来使用<br>none:无网络<br>bridge：网桥模式<br>brctl show 可以看到当前host的网桥，可以看到当前网桥上挂载的虚拟网卡有哪些，默认情况下，都是挂载到docker0上面了。但注意网桥内看到的虚拟网卡名称和容器内部看到的不一样的，因为是通过veth pair的方式连接的，可以理解一根网线的两端。同时容器被被分配一个与网桥在一个子网下的IP地址（DHCP），能否指定IP呢？</p>
-<p>docker也可以自己建立网桥，docker network create –driver bridge,如何指定吗？<br>答：可以，docker network create –driver bridge –subnet III –gateway III mynet</p>
-<p>指定网桥来创建虚机<br>docker run -ti –network=mynet,也可以指定IP  –ip=<br>注意：！！只有指定了subnet的网桥，才可以分配静态IP</p>
-<p>host：与主机公用网络的模式，但注意host使用过的端口docker就不能再使用了。</p>
-<p>镜像相关：<br>1、docker images，查询当前有多少镜像<br>bogon:blog alieric$ docker images<br>REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE<br>nginx               latest              958a7ae9e569        4 weeks ago         109 MB<br>bitnami/php-fpm     latest              86885793ee60        6 weeks ago         216 MB</p>
-<p>2、docker rmi imagesID，删除掉当前某个镜像</p>
-<p>容器相关<br>1、docker ps 正在运行的容器<br>2、docker ps -a，所有容器<br>bogon:blog alieric$ docker ps -a<br>CONTAINER ID        IMAGE               COMMAND                  CREATED              STATUS                          PORTS                NAMES<br>cf89077c66ed        nginx               “/bin/bash”              53 seconds ago       Exited (0) 10 seconds ago                            fervent_euler<br>7f5a6f6ded1b        nginx               “/bin/bash”              About a minute ago   Exited (0) About a minute ago                        gifted_thompson<br>0371d1fe39b0        nginx               “nginx -g ‘daemon …”   2 weeks ago          Exited (0) 2 weeks ago                               agitated_heyrovsky<br>fa996abdaff2        nginx               “–name mynginx”         2 weeks ago          Created                         0.0.0.0:80-&gt;80/tcp   frosty_knuth<br>59aba678060a        nginx               “/bin/bash”              2 weeks ago          Exited (0) 2 weeks ago                               ecstatic_goldberg</p>
-<p>created：已创建但未运行的容器<br>UP：正在运行<br>exited：运行但已经退出的容器<br>3、docker rm containerID，删除当前某个容器<br>4、docker rm $(docker ps -a)，删除所有，类比，docker rmi $(docker images)</p>
-
-          
+          <p>基本概念：<br>底层技术的实现：Cgroup和NameSpace，CPU、内存、IO的限制<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/06/28/docker-基础操作/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>

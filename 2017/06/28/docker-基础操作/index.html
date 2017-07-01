@@ -91,16 +91,16 @@
 
 
 
-<meta name="description" content="基本概念：底层技术的实现：Cgroup和NameSpace，CPU、内存、IO的限制内存：-m指定内存限额–memory-swap，限制内存+swap的限额，如果在创建时不指定–memory-swap，默认 memory：swap=1：1CPU:-c，–cpu-shares，限制cpu的使用权重，默认值是1024，注意只有在cpu资源紧张的情况下，才会按照这个比例来分配IO:–blkio-weig">
+<meta name="description" content="基本概念：底层技术的实现：Cgroup和NameSpace，CPU、内存、IO的限制">
 <meta property="og:type" content="article">
 <meta property="og:title" content="docker-基础操作">
 <meta property="og:url" content="http://yoursite.com/2017/06/28/docker-基础操作/index.html">
 <meta property="og:site_name" content="承霖的书房">
-<meta property="og:description" content="基本概念：底层技术的实现：Cgroup和NameSpace，CPU、内存、IO的限制内存：-m指定内存限额–memory-swap，限制内存+swap的限额，如果在创建时不指定–memory-swap，默认 memory：swap=1：1CPU:-c，–cpu-shares，限制cpu的使用权重，默认值是1024，注意只有在cpu资源紧张的情况下，才会按照这个比例来分配IO:–blkio-weig">
-<meta property="og:updated_time" content="2017-07-01T00:19:56.000Z">
+<meta property="og:description" content="基本概念：底层技术的实现：Cgroup和NameSpace，CPU、内存、IO的限制">
+<meta property="og:updated_time" content="2017-07-01T08:31:38.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="docker-基础操作">
-<meta name="twitter:description" content="基本概念：底层技术的实现：Cgroup和NameSpace，CPU、内存、IO的限制内存：-m指定内存限额–memory-swap，限制内存+swap的限额，如果在创建时不指定–memory-swap，默认 memory：swap=1：1CPU:-c，–cpu-shares，限制cpu的使用权重，默认值是1024，注意只有在cpu资源紧张的情况下，才会按照这个比例来分配IO:–blkio-weig">
+<meta name="twitter:description" content="基本概念：底层技术的实现：Cgroup和NameSpace，CPU、内存、IO的限制">
 
 
 
@@ -327,7 +327,7 @@
       
 
       
-        <p>基本概念：<br>底层技术的实现：Cgroup和NameSpace，CPU、内存、IO的限制<br>内存：<br>-m指定内存限额<br>–memory-swap，限制内存+swap的限额，如果在创建时不指定–memory-swap，默认 memory：swap=1：1<br>CPU:<br>-c，–cpu-shares，限制cpu的使用权重，默认值是1024，注意只有在cpu资源紧张的情况下，才会按照这个比例来分配<br>IO:<br>–blkio-weight，设置的是</p>
+        <p>基本概念：<br>底层技术的实现：Cgroup和NameSpace，CPU、内存、IO的限制<br><a id="more"></a><br>内存：<br>-m指定内存限额<br>–memory-swap，限制内存+swap的限额，如果在创建时不指定–memory-swap，默认 memory：swap=1：1<br>CPU:<br>-c，–cpu-shares，限制cpu的使用权重，默认值是1024，注意只有在cpu资源紧张的情况下，才会按照这个比例来分配<br>IO:<br>–blkio-weight，设置的是</p>
 <p>网络：none、bridge、host,使用的是–network=host…来使用<br>none:无网络<br>bridge：网桥模式<br>brctl show 可以看到当前host的网桥，可以看到当前网桥上挂载的虚拟网卡有哪些，默认情况下，都是挂载到docker0上面了。但注意网桥内看到的虚拟网卡名称和容器内部看到的不一样的，因为是通过veth pair的方式连接的，可以理解一根网线的两端。同时容器被被分配一个与网桥在一个子网下的IP地址（DHCP），能否指定IP呢？</p>
 <p>docker也可以自己建立网桥，docker network create –driver bridge,如何指定吗？<br>答：可以，docker network create –driver bridge –subnet III –gateway III mynet</p>
 <p>指定网桥来创建虚机<br>docker run -ti –network=mynet,也可以指定IP  –ip=<br>注意：！！只有指定了subnet的网桥，才可以分配静态IP</p>
@@ -350,6 +350,22 @@
     <div>
       
         
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>您的支持将鼓励我继续创作！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/uploads/wechat-reward.png" alt="承霖 WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+    </div>
+  </div>
+
 
       
     </div>
