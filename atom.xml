@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>承霖的书房</title>
+  <subtitle>记录、成长、迸发</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2017-07-01T07:57:44.000Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>承霖</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hexo-优化小方法</title>
+    <link href="http://yoursite.com/2017/07/01/hexo-%E4%BC%98%E5%8C%96%E5%B0%8F%E6%96%B9%E6%B3%95/"/>
+    <id>http://yoursite.com/2017/07/01/hexo-优化小方法/</id>
+    <published>2017-07-01T07:55:45.000Z</published>
+    <updated>2017-07-01T07:57:44.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;1、如果想要和我一样，拥有右上角的标识.&lt;a href=&quot;https://github.com/blog/273-github-ribbons&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/blog/273-githu
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>swift总结第四课.md</title>
+    <link href="http://yoursite.com/2017/07/01/swift%E6%80%BB%E7%BB%93%E7%AC%AC%E5%9B%9B%E8%AF%BE-md/"/>
+    <id>http://yoursite.com/2017/07/01/swift总结第四课-md/</id>
+    <published>2017-07-01T01:33:49.000Z</published>
+    <updated>2017-07-01T08:29:16.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;今天是第四课&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="swift" scheme="http://yoursite.com/tags/swift/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>swift总结第三课.md</title>
+    <link href="http://yoursite.com/2017/07/01/swift%E6%80%BB%E7%BB%93%E7%AC%AC%E4%B8%89%E8%AF%BE-md/"/>
+    <id>http://yoursite.com/2017/07/01/swift总结第三课-md/</id>
+    <published>2017-07-01T00:23:04.000Z</published>
+    <updated>2017-07-01T08:28:52.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;抱歉抱歉，昨天和老朋友们出去喝酒吃饭，忘记更了，现在补上，今天开始的是第四课，晚上更新&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="swift" scheme="http://yoursite.com/tags/swift/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>swift总结第二课</title>
+    <link href="http://yoursite.com/2017/06/29/swift%E6%80%BB%E7%BB%93%E7%AC%AC%E4%BA%8C%E8%AF%BE/"/>
+    <id>http://yoursite.com/2017/06/29/swift总结第二课/</id>
+    <published>2017-06-29T13:42:19.000Z</published>
+    <updated>2017-07-01T08:28:19.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;第二天，继续努力&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="swift" scheme="http://yoursite.com/tags/swift/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>docker-基础操作</title>
+    <link href="http://yoursite.com/2017/06/28/docker-%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/"/>
+    <id>http://yoursite.com/2017/06/28/docker-基础操作/</id>
+    <published>2017-06-28T15:07:08.000Z</published>
+    <updated>2017-07-01T08:31:38.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;基本概念：&lt;br&gt;底层技术的实现：Cgroup和NameSpace，CPU、内存、IO的限制&lt;br&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>swift总结第一课</title>
+    <link href="http://yoursite.com/2017/06/28/swift%E6%80%BB%E7%BB%93%E7%AC%AC%E4%B8%80%E8%AF%BE/"/>
+    <id>http://yoursite.com/2017/06/28/swift总结第一课/</id>
+    <published>2017-06-28T11:48:29.000Z</published>
+    <updated>2017-07-01T08:27:56.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;今天是第一课，加油&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="swift" scheme="http://yoursite.com/tags/swift/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>php-使用phpize增加扩展</title>
+    <link href="http://yoursite.com/2017/06/27/php-%E4%BD%BF%E7%94%A8phpize%E5%A2%9E%E5%8A%A0%E6%89%A9%E5%B1%95/"/>
+    <id>http://yoursite.com/2017/06/27/php-使用phpize增加扩展/</id>
+    <published>2017-06-26T23:30:50.000Z</published>
+    <updated>2017-07-01T08:29:30.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Linux下用phpize给PHP动态添加扩展&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="“php”" scheme="http://yoursite.com/tags/%E2%80%9Cphp%E2%80%9D/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ubantu-dns</title>
+    <link href="http://yoursite.com/2017/06/27/ubantu-dns/"/>
+    <id>http://yoursite.com/2017/06/27/ubantu-dns/</id>
+    <published>2017-06-26T23:28:30.000Z</published>
+    <updated>2017-06-26T23:29:35.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;ubuntu reboot以后会自动清空/etc/resolv.conf&lt;br&gt;默认的内容则来自于/etc/resolvconf/resolv.conf.d/base，将要添加的内容配置在这个文件即可在每次重启服务的时候重置nameserver，如nameserver 19
+    
+    </summary>
+    
+    
+      <category term="ubuntu" scheme="http://yoursite.com/tags/ubuntu/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>centos7.2搭建k8s实践</title>
+    <link href="http://yoursite.com/2017/06/25/centos7-2%E6%90%AD%E5%BB%BAk8s%E5%AE%9E%E8%B7%B5/"/>
+    <id>http://yoursite.com/2017/06/25/centos7-2搭建k8s实践/</id>
+    <published>2017-06-25T13:51:10.000Z</published>
+    <updated>2017-07-01T08:25:09.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;目前k8d是最流行的容器编排系统，万事都有第一步，今天就说说如何安装和部署。&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="“k8s”" scheme="http://yoursite.com/tags/%E2%80%9Ck8s%E2%80%9D/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>textField小功能</title>
+    <link href="http://yoursite.com/2017/06/25/textField%E5%B0%8F%E5%8A%9F%E8%83%BD/"/>
+    <id>http://yoursite.com/2017/06/25/textField小功能/</id>
+    <published>2017-06-25T01:16:09.000Z</published>
+    <updated>2017-07-01T08:29:42.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;1、return key 如果选择的是Done，那么keyboard的回车就是Done&lt;br&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>swift-6.24-tableView-1</title>
+    <link href="http://yoursite.com/2017/06/24/swift-6-24-tableView-1/"/>
+    <id>http://yoursite.com/2017/06/24/swift-6-24-tableView-1/</id>
+    <published>2017-06-24T13:45:52.000Z</published>
+    <updated>2017-06-24T14:41:41.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;1、nil的用法&lt;br&gt;override func tableView(_ tableView: UITableView,&lt;br&gt;                        willSelectRowAt indexPath: IndexPath) -&amp;gt; Inde
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>swift-segue</title>
+    <link href="http://yoursite.com/2017/06/24/swift-segue/"/>
+    <id>http://yoursite.com/2017/06/24/swift-segue/</id>
+    <published>2017-06-24T07:07:41.000Z</published>
+    <updated>2017-07-01T08:27:22.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;swift的一个小例子&lt;br&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>go</title>
+    <link href="http://yoursite.com/2017/06/24/go/"/>
+    <id>http://yoursite.com/2017/06/24/go/</id>
+    <published>2017-06-24T05:57:21.000Z</published>
+    <updated>2017-06-24T05:57:42.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;hexo deploy的超级大坑&lt;/p&gt;
+&lt;p&gt;hexo deploy 没有任何反应，其实是由于配置文件写错了。&lt;br&gt;重新编辑这个文件_config.yml，在deploy项里面的type、repo、branch等：后面加一个空格，然后才能提交。&lt;/p&gt;
+
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
