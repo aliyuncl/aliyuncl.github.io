@@ -75,7 +75,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="swift," />
 
 
 
@@ -91,16 +91,17 @@
 
 
 
-<meta name="description" content="基本概念：底层技术的实现：Cgroup和NameSpace，CPU、内存、IO的限制内存：-m指定内存限额–memory-swap，限制内存+swap的限额，如果在创建时不指定–memory-swap，默认 memory：swap=1：1CPU:-c，–cpu-shares，限制cpu的使用权重，默认值是1024，注意只有在cpu资源紧张的情况下，才会按照这个比例来分配IO:–blkio-weig">
+<meta name="description" content="if语句：if eles if + 条件（bool），如果为真，执行code体，如果为假，执行else codeswitch case语句：1、普通型var i = 0switch i {  //表达式，case进行一一对比，某个case为真，即可调出switch，需要使用c语言中的breakcase 0:“0” //被输出case 1:“1”default:“2”}2、如果想要执行2条case，">
+<meta name="keywords" content="swift">
 <meta property="og:type" content="article">
-<meta property="og:title" content="docker-基础操作">
-<meta property="og:url" content="http://yoursite.com/2017/06/28/docker-基础操作/index.html">
+<meta property="og:title" content="swift总结第四课.md">
+<meta property="og:url" content="http://yoursite.com/2017/07/01/swift总结第四课-md/index.html">
 <meta property="og:site_name" content="承霖的书房">
-<meta property="og:description" content="基本概念：底层技术的实现：Cgroup和NameSpace，CPU、内存、IO的限制内存：-m指定内存限额–memory-swap，限制内存+swap的限额，如果在创建时不指定–memory-swap，默认 memory：swap=1：1CPU:-c，–cpu-shares，限制cpu的使用权重，默认值是1024，注意只有在cpu资源紧张的情况下，才会按照这个比例来分配IO:–blkio-weig">
-<meta property="og:updated_time" content="2017-07-01T00:19:56.000Z">
+<meta property="og:description" content="if语句：if eles if + 条件（bool），如果为真，执行code体，如果为假，执行else codeswitch case语句：1、普通型var i = 0switch i {  //表达式，case进行一一对比，某个case为真，即可调出switch，需要使用c语言中的breakcase 0:“0” //被输出case 1:“1”default:“2”}2、如果想要执行2条case，">
+<meta property="og:updated_time" content="2017-07-01T07:22:03.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="docker-基础操作">
-<meta name="twitter:description" content="基本概念：底层技术的实现：Cgroup和NameSpace，CPU、内存、IO的限制内存：-m指定内存限额–memory-swap，限制内存+swap的限额，如果在创建时不指定–memory-swap，默认 memory：swap=1：1CPU:-c，–cpu-shares，限制cpu的使用权重，默认值是1024，注意只有在cpu资源紧张的情况下，才会按照这个比例来分配IO:–blkio-weig">
+<meta name="twitter:title" content="swift总结第四课.md">
+<meta name="twitter:description" content="if语句：if eles if + 条件（bool），如果为真，执行code体，如果为假，执行else codeswitch case语句：1、普通型var i = 0switch i {  //表达式，case进行一一对比，某个case为真，即可调出switch，需要使用c语言中的breakcase 0:“0” //被输出case 1:“1”default:“2”}2、如果想要执行2条case，">
 
 
 
@@ -128,13 +129,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/06/28/docker-基础操作/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/07/01/swift总结第四课-md/"/>
 
 
 
 
 
-  <title>docker-基础操作 | 承霖的书房</title>
+  <title>swift总结第四课.md | 承霖的书房</title>
   
 
 
@@ -253,7 +254,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/28/docker-基础操作/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/01/swift总结第四课-md/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="承霖">
@@ -270,7 +271,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">docker-基础操作</h1>
+          <h1 class="post-title" itemprop="name headline">swift总结第四课.md</h1>
         
 
         <div class="post-meta">
@@ -282,8 +283,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-28T23:07:08+08:00">
-                2017-06-28
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-01T09:33:49+08:00">
+                2017-07-01
               </time>
             
 
@@ -301,7 +302,7 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a class="cloud-tie-join-count" href="/2017/06/28/docker-基础操作/#comments" itemprop="discussionUrl">
+                <a class="cloud-tie-join-count" href="/2017/07/01/swift总结第四课-md/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count join-count" itemprop="commentCount"></span>
                 </a>
               </span>
@@ -327,15 +328,35 @@
       
 
       
-        <p>基本概念：<br>底层技术的实现：Cgroup和NameSpace，CPU、内存、IO的限制<br>内存：<br>-m指定内存限额<br>–memory-swap，限制内存+swap的限额，如果在创建时不指定–memory-swap，默认 memory：swap=1：1<br>CPU:<br>-c，–cpu-shares，限制cpu的使用权重，默认值是1024，注意只有在cpu资源紧张的情况下，才会按照这个比例来分配<br>IO:<br>–blkio-weight，设置的是</p>
-<p>网络：none、bridge、host,使用的是–network=host…来使用<br>none:无网络<br>bridge：网桥模式<br>brctl show 可以看到当前host的网桥，可以看到当前网桥上挂载的虚拟网卡有哪些，默认情况下，都是挂载到docker0上面了。但注意网桥内看到的虚拟网卡名称和容器内部看到的不一样的，因为是通过veth pair的方式连接的，可以理解一根网线的两端。同时容器被被分配一个与网桥在一个子网下的IP地址（DHCP），能否指定IP呢？</p>
-<p>docker也可以自己建立网桥，docker network create –driver bridge,如何指定吗？<br>答：可以，docker network create –driver bridge –subnet III –gateway III mynet</p>
-<p>指定网桥来创建虚机<br>docker run -ti –network=mynet,也可以指定IP  –ip=<br>注意：！！只有指定了subnet的网桥，才可以分配静态IP</p>
-<p>host：与主机公用网络的模式，但注意host使用过的端口docker就不能再使用了。</p>
-<p>镜像相关：<br>1、docker images，查询当前有多少镜像<br>bogon:blog alieric$ docker images<br>REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE<br>nginx               latest              958a7ae9e569        4 weeks ago         109 MB<br>bitnami/php-fpm     latest              86885793ee60        6 weeks ago         216 MB</p>
-<p>2、docker rmi imagesID，删除掉当前某个镜像</p>
-<p>容器相关<br>1、docker ps 正在运行的容器<br>2、docker ps -a，所有容器<br>bogon:blog alieric$ docker ps -a<br>CONTAINER ID        IMAGE               COMMAND                  CREATED              STATUS                          PORTS                NAMES<br>cf89077c66ed        nginx               “/bin/bash”              53 seconds ago       Exited (0) 10 seconds ago                            fervent_euler<br>7f5a6f6ded1b        nginx               “/bin/bash”              About a minute ago   Exited (0) About a minute ago                        gifted_thompson<br>0371d1fe39b0        nginx               “nginx -g ‘daemon …”   2 weeks ago          Exited (0) 2 weeks ago                               agitated_heyrovsky<br>fa996abdaff2        nginx               “–name mynginx”         2 weeks ago          Created                         0.0.0.0:80-&gt;80/tcp   frosty_knuth<br>59aba678060a        nginx               “/bin/bash”              2 weeks ago          Exited (0) 2 weeks ago                               ecstatic_goldberg</p>
-<p>created：已创建但未运行的容器<br>UP：正在运行<br>exited：运行但已经退出的容器<br>3、docker rm containerID，删除当前某个容器<br>4、docker rm $(docker ps -a)，删除所有，类比，docker rmi $(docker images)</p>
+        <p>if语句：if eles if + 条件（bool），如果为真，执行code体，如果为假，执行else code<br>switch case语句：<br>1、普通型<br>var i = 0<br>switch i {  //表达式，case进行一一对比，某个case为真，即可调出switch，需要使用c语言中的break<br>case 0:<br>“0” //被输出<br>case 1:<br>“1”<br>default:<br>“2”<br>}<br>2、如果想要执行2条case，那么可以在case中，分割<br>var i = 3<br>switch i {<br>case 0,3:<br>“0” //被输出<br>case 1:<br>“1”<br>default:<br>“2”<br>}<br>3、如果想要执行完一条case，继续执行下一条case，那么需要使用fallthrough<br>var i = 0<br>switch i {<br>case 0:<br>“0” //被输出<br>fallthrough    //<br>case 1:<br>“1” //被输出<br>case 2:<br>“2”<br>default:<br>“default”<br>}<br>特殊用法：switch支持区间分割<br>let age = 5<br>switch age {<br>case 0…11:<br>print(“正太”)<br>case 12…30:<br>print(“少年”)<br>default:<br>print(“大叔”)<br>}</p>
+<p>for-in语句：<br>for i in 1…100<br>    print(“(i)”)</p>
+<p>历遍数组：<br>let numbers = [“1”,”2”,”3”,”4”]<br>    for number in numbers{<br>     print(“(number)”)<br>}<br>历遍字典：字典是kv的形式存在的，不是简单的一个变量或者是一个常量<br>let dic = {“lily”:19,”baby”:2}<br>    for (aname,iage) in dic{<br>    print(“(aname): is (iage)”)<br>}</p>
+<p>for-each循环<br>(1…10).forEach {<br>print($0)<br>}</p>
+<p>while循环<br>while i&lt;100 {  //这里是循环条件，只要符合循环条件，那么就一定会执行循环体<br>i+=1<br>}</p>
+<p>repeat{<br>i+=1<br>}while i&lt;100</p>
+<p>自定义函数：<br>0、可变形参：可以接受0个或者任意数量的输入参数<br>func test(numbers:Int…) -&gt; Int{<br>var count:Int = 0<br>for number in numbers{<br>count += number<br>}<br>return count<br>}</p>
+<p>1、无返回值的函数<br>func test(name:String){  //func 是函数的声明 test是函数的名称 ()参数,可以有多个参数，默认情况下是name是常量，常量类型是string，{}是函数体，如果需要指定参数的变量类型，需要使用var</p>
+<p>}<br>注意：func test(name:String)，默认情况下name就是自己的参数标签，也可以指定外部参数标签，func test(abc name:String),这样的话，在外部调用参数的时候，只能使用abc这个参数标签<br>func test(<em> name:String),</em>意思是不指定参数标签。</p>
+<p>2、返回一个返回值<br>func test(name:String) -&gt; Bool{<br>return true<br>}</p>
+<p>3、返回值是元组：<br>func SayHello(value:String ,nums Value1:String)-&gt;(String,String){</p>
+<p>return (value,Value1)</p>
+<p>函数未完待续——————————-</p>
+<p>背单词：<br>generate：形成、造成<br>duplicate: 复制、重复<br>algorithm: 算法、演算法则的意思<br>recap：翻新，概括<br>invocation：乞求、乞讨<br>prefix：前缀<br>contrary to：相反地、矛盾的<br>remedy：补救<br>immersive：拟真的<br>spice：添加情趣，香料</p>
+<p>注意：添加一个UIViewchontroller，需要在custom class里面指定它是属于哪个类的</p>
+<p>实例变量instance variable和本地变量local variable的区别：<br>1、本地变量仅仅存在于method的里面，一旦method结束，那么变量就消失了。原理：每次调用方法的时候，都会生成新的变量，老的变量会丢失。<br>2、实例变量存在于这个object里面，可以在method之外的，一般把他们放在最上面，都可以用。<br>如果已经声明了实例变量，再在method里面声明本地变量（变量名相同），本地变量只能在method里面是合法的。<br>注意：一般情况下，建议在实例变量前面在一个_，比如_score，说明是个实例变量，以区分本地变量</p>
+<p>极其重要：：：<br>let alertAction = UIAlertAction(title:”ok”,style: .default,handler: nil)<br>handler：nil<br>在实例1中，目前：点击button以后，会执行present—各个method，实际app就是在未点击alertcontroller上面的ok，就已经生成了startroud等，为了解决这个问题，引入闭包的概念：<br>handler告诉alertController要发生什么，目前是nil，什么都不告诉，继续执行下面的method<br>如果改成：<br>handler: { action in<br>self.startNewRound()<br>self.updateLabel()<br>})<br>这个代码块就叫做闭包，可以理解为一个no name的method，这块代码不会被马上执行，而是等到tap ok才会被执行。<br>注意：<br>闭包连，向view controller发送消息，必须使用self，在外部正常代码可以不写，这个swift得规定！</p>
+<p>为了向某个object传递message，可以采用以下格式：<br>reveiver.methodName(parameters),其中receiver就是那个接受消息的object，如果是自己的话，可以用self，一般可以省略</p>
+<p>@IBAction和普通的func有区别吗：<br>没有，除了~<br>@IBAction可以连接IB页面的button、slide等等，通过：<br>@IBAction func XX(<em> slider: UISlider)<br>@IBAction func XX(</em> button: UIButton)<br>说白了，就是IB的这些object在不连接的时候，都看不到func</p>
+<p>修改一个值的正负号：<br>1、 a *= -1<br>2、 abc(a)   绝对值<br>3、 构造if语句，让大-小</p>
+<hr>
+<p>button——————&gt;UIViewController<br>action segue：<br>present as popover：popover 类型，就是采用浮动窗的形式把新页面展示出来<br>present modally：modally，模态转换，新的场景完全盖住了旧的那个。用户无法再与上一个场景交互，除非他们先关闭这个场景<br>segue，attrubute，可以选择转换的类型和动画</p>
+<p>UILable的用法：<br>import UIKit</p>
+<p>class ViewController: UIViewController {  //声明一个class，这个新类继承UIViewController</p>
+<p>override func viewDidLoad() {<br>super.viewDidLoad()<br>//设置标签x坐标：10，y坐标：20，长：300，宽：100<br>let label = UILabel(frame:CGRect(x:10, y:20, width:300, height:100)) //注意这里的单位是pt，不是像素<br>//label的文本<br>label.text = “hangge.com”<br>self.view.addSubview(label);<br>}<br>}</p>
+<p>label.textColor = UIColor.white //白色文字<br>label.backgroundColor = UIColor.black //黑色背景<br>label.textAlignment = .right//文字右对齐</p>
+<p>妈呀，好长啊，直接贴链接了<br><a href="http://www.hangge.com/blog/cache/detail_528.html" target="_blank" rel="external">http://www.hangge.com/blog/cache/detail_528.html</a></p>
+<hr>
+<p>原文出自：www.hangge.com  转载请保留原文链接：<a href="http://www.hangge.com/blog/cache/detail_516.html" target="_blank" rel="external">http://www.hangge.com/blog/cache/detail_516.html</a></p>
 
       
     </div>
@@ -363,6 +384,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/swift/" rel="tag"># swift</a>
+          
+        </div>
+      
 
       
       
@@ -372,8 +399,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/06/28/swift总结第一课/" rel="next" title="swift总结第一课">
-                <i class="fa fa-chevron-left"></i> swift总结第一课
+              <a href="/2017/07/01/swift总结第三课-md/" rel="next" title="swift总结第三课.md">
+                <i class="fa fa-chevron-left"></i> swift总结第三课.md
               </a>
             
           </div>
@@ -381,10 +408,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/06/29/swift总结第二课/" rel="prev" title="swift总结第二课">
-                swift总结第二课 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
