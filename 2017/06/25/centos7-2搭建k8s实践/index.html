@@ -91,17 +91,17 @@
 
 
 
-<meta name="description" content="规划：192.168.1.2 minon1192.168.1.3 master192.168.1.4 minon2 集群安装部署： k8s集群组件：1、etcd 一个高可用的KV键值对存储和服务发现系统2、flannel 实现跨主机的容器网络的通信3、kube-apiserver 提供k8s集群的API调用4、kube-controller-manager 确保集群服务5、kube-schedul">
+<meta name="description" content="目前k8d是最流行的容器编排系统，万事都有第一步，今天就说说如何安装和部署。">
 <meta name="keywords" content="“k8s”">
 <meta property="og:type" content="article">
 <meta property="og:title" content="centos7.2搭建k8s实践">
 <meta property="og:url" content="http://yoursite.com/2017/06/25/centos7-2搭建k8s实践/index.html">
 <meta property="og:site_name" content="承霖的书房">
-<meta property="og:description" content="规划：192.168.1.2 minon1192.168.1.3 master192.168.1.4 minon2 集群安装部署： k8s集群组件：1、etcd 一个高可用的KV键值对存储和服务发现系统2、flannel 实现跨主机的容器网络的通信3、kube-apiserver 提供k8s集群的API调用4、kube-controller-manager 确保集群服务5、kube-schedul">
-<meta property="og:updated_time" content="2017-06-26T14:49:36.000Z">
+<meta property="og:description" content="目前k8d是最流行的容器编排系统，万事都有第一步，今天就说说如何安装和部署。">
+<meta property="og:updated_time" content="2017-07-01T08:25:09.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="centos7.2搭建k8s实践">
-<meta name="twitter:description" content="规划：192.168.1.2 minon1192.168.1.3 master192.168.1.4 minon2 集群安装部署： k8s集群组件：1、etcd 一个高可用的KV键值对存储和服务发现系统2、flannel 实现跨主机的容器网络的通信3、kube-apiserver 提供k8s集群的API调用4、kube-controller-manager 确保集群服务5、kube-schedul">
+<meta name="twitter:description" content="目前k8d是最流行的容器编排系统，万事都有第一步，今天就说说如何安装和部署。">
 
 
 
@@ -328,7 +328,7 @@
       
 
       
-        <p>规划：<br>192.168.1.2 minon1<br>192.168.1.3 master<br>192.168.1.4 minon2</p>
+        <p>目前k8d是最流行的容器编排系统，万事都有第一步，今天就说说如何安装和部署。<br><a id="more"></a><br>规划：<br>192.168.1.2 minon1<br>192.168.1.3 master<br>192.168.1.4 minon2</p>
 <p>集群安装部署：</p>
 <p>k8s集群组件：<br>1、etcd 一个高可用的KV键值对存储和服务发现系统<br>2、flannel 实现跨主机的容器网络的通信<br>3、kube-apiserver 提供k8s集群的API调用<br>4、kube-controller-manager 确保集群服务<br>5、kube-scheduler 调度容器，分配到Node<br>6、kubelet 在Node节点上按照配置文件中定义的容器规格启动容器<br>7、kube-proxy 提供网络代理服务</p>
 <p>确保所有机器上面安装<br>1、yum -y install epel-release<br>2、关闭防火墙，selinux，避免受到防火墙的影响</p>

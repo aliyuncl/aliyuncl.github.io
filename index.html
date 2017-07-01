@@ -1338,26 +1338,14 @@
 
       
         
-          
-            <p>规划：<br>192.168.1.2 minon1<br>192.168.1.3 master<br>192.168.1.4 minon2</p>
-<p>集群安装部署：</p>
-<p>k8s集群组件：<br>1、etcd 一个高可用的KV键值对存储和服务发现系统<br>2、flannel 实现跨主机的容器网络的通信<br>3、kube-apiserver 提供k8s集群的API调用<br>4、kube-controller-manager 确保集群服务<br>5、kube-scheduler 调度容器，分配到Node<br>6、kubelet 在Node节点上按照配置文件中定义的容器规格启动容器<br>7、kube-proxy 提供网络代理服务</p>
-<p>确保所有机器上面安装<br>1、yum -y install epel-release<br>2、关闭防火墙，selinux，避免受到防火墙的影响</p>
-<h1 id="systemctl-stop-firewalld"><a href="#systemctl-stop-firewalld" class="headerlink" title="systemctl stop firewalld"></a>systemctl stop firewalld</h1><h1 id="systemctl-disable-firewalld"><a href="#systemctl-disable-firewalld" class="headerlink" title="systemctl disable firewalld"></a>systemctl disable firewalld</h1><h1 id="setenforce-0"><a href="#setenforce-0" class="headerlink" title="setenforce 0"></a>setenforce 0</h1><p>一、在master上安装etcd、kubernetes-master<br>yum -y install etcd kubernetes-master</p>
-<p>按照如下修改/etc/etcd/etcd.conf<br>ETCD_NAME=default<br>ETCD_DATA_DIR=”/var/lib/etcd/default.etcd”<br>ETCD_LISTEN_CLIENT_URLS=”<a href="http://0.0.0.0:2379" target="_blank" rel="external">http://0.0.0.0:2379</a>“<br>ETCD_ADVERTISE_CLIENT_URLS=”<a href="http://localhost:2379" target="_blank" rel="external">http://localhost:2379</a>“</p>
-<p>按照如下修改/etc/kubernetes/apiserver<br>KUBE_API_ADDRESS=”–insecure-bind-address=0.0.0.0”<br>KUBE_API_PORT=”–port=8080”<br>KUBELET_PORT=”–kubelet-port=10250”<br>KUBE_ETCD_SERVERS=”–etcd-servers=<a href="http://127.0.0.1:2379" target="_blank" rel="external">http://127.0.0.1:2379</a>“<br>KUBE_SERVICE_ADDRESSES=”–service-cluster-ip-range=10.254.0.0/16”<br>KUBE_ADMISSION_CONTROL=”–admission-control=NamespaceLifecycle,NamespaceExists,LimitRanger,SecurityContextDeny,ResourceQuota”<br>KUBE_API_ARGS=””</p>
-<p>启动etcd、kube-apiserver、kube-controller-manager、kube-scheduler<br>for SERVICES in etcd kube-apiserver kube-controller-manager kube-scheduler; do systemctl restart $SERVICES;systemctl enable $SERVICES;systemctl status $SERVICES ; done</p>
-<p>在etcd中定义flannel网络</p>
-<h1 id="etcdctl-mk-atomic-io-network-config-‘-“Network”-”172-17-0-0-16”-’"><a href="#etcdctl-mk-atomic-io-network-config-‘-“Network”-”172-17-0-0-16”-’" class="headerlink" title="etcdctl mk /atomic.io/network/config ‘{“Network”:”172.17.0.0/16”}’"></a>etcdctl mk /atomic.io/network/config ‘{“Network”:”172.17.0.0/16”}’</h1><p>在minon1、2安装flannel、kubernetes-node<br>yum -y install flannel kubernetes-node</p>
-<p>修改/etc/kubernetes/config文件<br>KUBE_LOGTOSTDERR=”–logtostderr=true”<br>KUBE_LOG_LEVEL=”–v=0”<br>KUBE_ALLOW_PRIV=”–allow-privileged=false”<br>KUBE_MASTER=”–master=<a href="http://192.168.182.142:8080" target="_blank" rel="external">http://192.168.182.142:8080</a>“</p>
-<p>为flannel网路指定etcd服务，修改/etc/sysconfig/flanneld<br>FLANNEL_ETCD=”<a href="http://192.168.182.142:2379" target="_blank" rel="external">http://192.168.182.142:2379</a>“<br>FLANNEL_ETCD_KEY=”/atomic.io/network”</p>
-<p>在每个node上（minon）配置/etc/kubernetes/kubelet<br>KUBELET_ADDRESS=”–address=0.0.0.0”<br>KUBELET_PORT=”–port=10250”<br>KUBELET_HOSTNAME=”–hostname-override=192.168.182.141” //修改成node IP<br>KUBELET_API_SERVER=”–api-servers=<a href="http://192.168.182.142:8080" target="_blank" rel="external">http://192.168.182.142:8080</a>“ //修改成master IP<br>KUBELET_POD_INFRA_CONTAINER=”–pod-infra-container-image=registry.access.redhat.com/rhel7/pod-infrastructure:latest”<br>KUBELET_ARGS=””</p>
-<p>在所有节点上面启动kube-proxy,kubelet,docker,flanneld<br>for SERVICES in kube-proxy kubelet docker flanneld;do systemctl restart $SERVICES;systemctl enable $SERVICES;systemctl status $SERVICES; done</p>
-<p>master上验证搭建成功<br>[root@142 ~]# kubectl get node<br>NAME              STATUS    AGE<br>192.168.182.141   Ready     55s<br>192.168.182.143   Ready     54s</p>
-<p>注：<br>vmware如何修改为静态IP？<br>1、在vmware里面，创建一个子网<br>2、在虚机里面选择这个子网<br>3、修改/etc/sysconfig/network-s…./ifcfg-ens<br>dhcp-&gt;static<br>IPADDR<br>GATEWAY<br>NETMASK<br>3.1 修改dns<br>4、systemctl restart network</p>
-<p>如何永久修改主机名centos7.2<br>hostnamectl set-hostname 141</p>
-
-          
+          <p>目前k8d是最流行的容器编排系统，万事都有第一步，今天就说说如何安装和部署。<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/06/25/centos7-2搭建k8s实践/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
