@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-07-01T07:57:44.000Z</updated>
+  <updated>2017-07-02T00:49:15.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,11 +16,32 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>swift总结第五课</title>
+    <link href="http://yoursite.com/2017/07/02/swift%E6%80%BB%E7%BB%93%E7%AC%AC%E4%BA%94%E8%AF%BE/"/>
+    <id>http://yoursite.com/2017/07/02/swift总结第五课/</id>
+    <published>2017-07-02T00:17:44.000Z</published>
+    <updated>2017-07-02T00:49:15.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;今天是深度学习swift的第五天，终于用上markdown专门的编辑器了，想想心里还有点小激动呢。&lt;/p&gt;
+&lt;p&gt;ps：到云公司加班，竟然没空调！没。。！我了个大曹！表示当前身体温度是38度左右，也是醉醉的。&lt;/p&gt;
+&lt;p&gt;谈谈我对学习iOS的想法吧，以免自己忘记&lt;/p&gt;
+
+    
+    </summary>
+    
+    
+      <category term="swfit" scheme="http://yoursite.com/tags/swfit/"/>
+    
+  </entry>
+  
+  <entry>
     <title>hexo-优化小方法</title>
     <link href="http://yoursite.com/2017/07/01/hexo-%E4%BC%98%E5%8C%96%E5%B0%8F%E6%96%B9%E6%B3%95/"/>
     <id>http://yoursite.com/2017/07/01/hexo-优化小方法/</id>
     <published>2017-07-01T07:55:45.000Z</published>
-    <updated>2017-07-01T07:57:44.000Z</updated>
+    <updated>2017-07-01T10:02:43.000Z</updated>
     
     <summary type="html">
     
@@ -36,7 +57,7 @@
     <link href="http://yoursite.com/2017/07/01/swift%E6%80%BB%E7%BB%93%E7%AC%AC%E5%9B%9B%E8%AF%BE-md/"/>
     <id>http://yoursite.com/2017/07/01/swift总结第四课-md/</id>
     <published>2017-07-01T01:33:49.000Z</published>
-    <updated>2017-07-01T08:29:16.000Z</updated>
+    <updated>2017-07-02T00:17:47.000Z</updated>
     
     <summary type="html">
     
