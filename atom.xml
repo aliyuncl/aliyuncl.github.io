@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-07-02T14:05:27.000Z</updated>
+  <updated>2017-07-02T14:19:49.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,24 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>swift-UI控件系列学习</title>
+    <link href="http://yoursite.com/2017/07/02/swift-UI%E6%8E%A7%E4%BB%B6%E7%B3%BB%E5%88%97%E5%AD%A6%E4%B9%A0/"/>
+    <id>http://yoursite.com/2017/07/02/swift-UI控件系列学习/</id>
+    <published>2017-07-02T14:10:59.000Z</published>
+    <updated>2017-07-02T14:19:49.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;前言：&quot;&gt;&lt;a href=&quot;#前言：&quot; class=&quot;headerlink&quot; title=&quot;前言：&quot;&gt;&lt;/a&gt;前言：&lt;/h1&gt;&lt;p&gt;一直都想开始这个系列，但总觉得自己比较low，各种学不会，各种智商低，不过我现在不这么想了，虽然我没有其他那么优秀，但我可以慢慢做起
+    
+    </summary>
+    
+    
+      <category term="swift" scheme="http://yoursite.com/tags/swift/"/>
+    
+  </entry>
   
   <entry>
     <title>swift总结第五课</title>
