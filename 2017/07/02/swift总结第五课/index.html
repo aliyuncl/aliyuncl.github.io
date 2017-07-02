@@ -114,7 +114,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/07/02/swift总结第五课/index.html">
 <meta property="og:site_name" content="承霖的书房">
 <meta property="og:description" content="今天是深度学习swift的第五天，终于用上markdown专门的编辑器了，想想心里还有点小激动呢。 ps：到云公司加班，竟然没空调！没。。！我了个大曹！表示当前身体温度是38度左右，也是醉醉的。 谈谈我对学习iOS的想法吧，以免自己忘记 勿忘初心这个是我对自己说的，学习iOS是我一直以来的想法， 也不是说为了找工作，也不是说非iOS不可，也不是说因为XX目的，认识我的人都知道，我现在薪资福利都还不">
-<meta property="og:updated_time" content="2017-07-02T00:49:15.000Z">
+<meta property="og:updated_time" content="2017-07-02T14:04:19.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="swift总结第五课">
 <meta name="twitter:description" content="今天是深度学习swift的第五天，终于用上markdown专门的编辑器了，想想心里还有点小激动呢。 ps：到云公司加班，竟然没空调！没。。！我了个大曹！表示当前身体温度是38度左右，也是醉醉的。 谈谈我对学习iOS的想法吧，以免自己忘记 勿忘初心这个是我对自己说的，学习iOS是我一直以来的想法， 也不是说为了找工作，也不是说非iOS不可，也不是说因为XX目的，认识我的人都知道，我现在薪资福利都还不">
@@ -356,6 +356,92 @@
 <h3 id="iOS-未来？"><a href="#iOS-未来？" class="headerlink" title="iOS 未来？"></a>iOS 未来？</h3><p>第三点，也是我最想分享给大家，如果不愿意看我废话的，可以直接跳到这里。我浅显认为iOS的前景是很棒的。</p>
 <p>虚拟现实的技术在去年和前年各种大火，好像近期却有点走下坡路，原因呢？技术不成熟？我：可能是，但这绝对不是最重要的因素，每一项技术的发展都会经历兴起—高度发展—平稳过度—整合—平稳—衰落（被新兴技术取代），但AR\VR技术本应在高度发展的阶段，但偏偏在这个时间点，又没人说话了！这是为什么？我浅显地认为这是载体的问题，大家都知道各个平台都发布了自己的虚拟现实载体，比如google XXX，某某公司XXX，请允许偷点懒，名字太长我都不愿意去查了，但有肯定是有的，连华强北的XX公司都发布了某个VR眼镜，简直了~~~</p>
 <p>未完待续哈。。。电信终于来人了。。。</p>
+<hr>
+<h3 id="更新作业"><a href="#更新作业" class="headerlink" title="更新作业"></a>更新作业</h3><p>bundle：封装</p>
+<p>dimension 尺寸</p>
+<p>emulation：模仿</p>
+<p>Auto Lanout自动布局</p>
+<p>想要实现自动布局，必须要创建alignment constraints，然后UIKIT会根据约束关系来定位每个view的具体位置</p>
+<p>constrain to margins：从margins开始的距离</p>
+<p> portion：一部分</p>
+<p>panel：控制板</p>
+<p>align：排列</p>
+<p>constraints：约束，alignment constraints，边界约束线</p>
+<p>evaluate：评价，估计</p>
+<p>collapse：崩溃</p>
+<p>hover：旋转、徘徊</p>
+<p>tackle：着手处理</p>
+<p>opt-in：选择进入</p>
+<p>scale up：按比例增加</p>
+<p>seamless：无缝的; 无漏洞的;</p>
+<p>splash：溅起，溅落</p>
+<p>crossfade：淡入淡出</p>
+<p>subtle：微妙的，巧妙地</p>
+<p>emphasis on：强调</p>
+<p>asset：资产，财产</p>
+<p>slot：位置、槽位</p>
+<p>provisioning profiles配置文件</p>
+<p>hereby：以此方式</p>
+<p>grant：授权、授予、同意、许可</p>
+<p> QuartCore框架：crossfade常用的框架</p>
+<hr>
+<p>构造过程：使用类、结构体、枚举类型的实例之前的准备过程，在新实例可用前必须执行这个过程，具体操作包括设置实例中国每个存储型属性的初始值和执行其他必须的设置或初始化工作。</p>
+<p>–构造器就是来实现这个构造过程，这些构造器可以看做是用来创建特定类型新势力的特殊方法，注意与OC的构造器不同，swift的构造器无需返回值，它们的主要任务是保证新势力在第一次使用前完成正确的初始化。</p>
+<p> 类的实例也可以通过定义析构器在实例释放之前执行特定的清除工作。</p>
+<p><strong>存储属性的初始赋值</strong></p>
+<p>类和结构体在创建实例时，必须为所有存储型属性赋初值，存储型属性的值不能处于一个未知的状态。</p>
+<p>注意：可以在定义属性的时候，设置初始值，也可以使用构造器来指定比如：</p>
+<p>class XX {</p>
+<p>  vara : Int  //未指定</p>
+<p>  varab : Int = 1  //这个叫，默认属性值</p>
+<p>}</p>
+<p>构造器：在创建某个特定类型的新实例时被调用。最简单的方式是：</p>
+<p>init() {</p>
+<p>  // 构造过程，比如</p>
+<p>  vara = 1</p>
+<p>}</p>
+<p>自定义构造过程：可以通过输入参数和可选类型的属性来自定义构造过程，也可以在构造过程中修改常量属性。</p>
+<p>1、  构造参数：</p>
+<p>struct abc {</p>
+<p>  vartemp : Double</p>
+<p> init(fortemp intemp : Double){</p>
+<p>   temp = intemp –  1.2     //注意这里有个坑，如果声明是double类型，那么这里的数字都应该是double类型</p>
+<p> init(for temp1 intemp1 :Double){</p>
+<p>temp = intemp1 – 2.0}</p>
+<p>}</p>
+<p>let haha = abc(fortemp: 212)</p>
+<p>haha.temp 可以得到经过构造器初始化以后的属性值</p>
+<p>第一个构造器拥有一个构造参数，其外部名字是fortemp，内部名字叫intemp，在内部构造的过程中使用内部名称，第二个同理，这2个构造器都将唯一的参数值转换成temp，并保存在属性temp里面了</p>
+<p>swift里面，构造器的参数如果没有定义外部名称，那么会默认生成一个与内部名称相同的外部名称。</p>
+<p>注意当构建了构造器，那么就必须要通过构造器的外部参数名来传值，否则是不生效的。</p>
+<p>注意：构造器的参数，也可以不带外部的参数名，使用_即可，比如</p>
+<p>init(_ intemp2 : Double){</p>
+<p>​           temp= intem2 - 100</p>
+<p>}</p>
+<p>可选类型：</p>
+<p>如果定制了的类型包括一个逻辑上允许取值为空的存储型属性——无论是因为它无法再初始化时赋值，还是因为它在某个时间点可以赋值为空，你都需要将它定义为可选类型。可选类型的属性将自动初始化为nil，表示这个属性是有意在初始化时为空的。</p>
+<p>比如</p>
+<p>var abc : String?，这种形式的，构造器都会默认为nil</p>
+<p>class ss {</p>
+<p>​           leta :String</p>
+<p>​           init(text: String){</p>
+<p>​             self.text = text</p>
+<p>}</p>
+<p>理论上来说，声明的常量a是无法修改的，但是在类的构造过程中依然可以被修改。</p>
+<p>注意：对于类的实例来说，它的常量属性只能在定义它的类的构造过程中修改，不能在子类中修改。</p>
+<p>默认构造器：</p>
+<p>如果结构体或类的所有属性都有默认值，同时没有自定义的构造器，那么swift会给这些结构体或类提供一个默认构造器，这个默认构造器将简单地创建一个所有属性值都设置为默认值的实例。</p>
+<p>class a {</p>
+<p>  varname: String?</p>
+<p>  varquan = 1</p>
+<p>  varabc = false</p>
+<p>}</p>
+<p>var ab = a()</p>
+<p>上面的实例中，虽然name是个可选型，但默认构造成了nil</p>
+<p>结构体的逐一成员构造器：</p>
+<p>这个是构造器对属性赋值的简单方法，在逐一成员构造器中，通过与成员属性名相同的参数名进行传值来完成队成员属性的初始赋值。</p>
+<p>值类型的构造器代理</p>
+<p>构造器可以通过调用其他构造器来完成实例的部分构造过程，能减少多个构造器间的代码重复。</p>
 
       
     </div>
@@ -562,7 +648,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#勿忘初心"><span class="nav-number">1.</span> <span class="nav-text">勿忘初心</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#iOS-未来？"><span class="nav-number">2.</span> <span class="nav-text">iOS 未来？</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#勿忘初心"><span class="nav-number">1.</span> <span class="nav-text">勿忘初心</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#iOS-未来？"><span class="nav-number">2.</span> <span class="nav-text">iOS 未来？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#更新作业"><span class="nav-number">3.</span> <span class="nav-text">更新作业</span></a></li></ol></div>
             
 
           </div>
@@ -593,7 +679,7 @@
 </div>
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共7.0k字</span>
+  <span class="post-count">博客全站共8.2k字</span>
 </div>
 
         
