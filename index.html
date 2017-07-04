@@ -386,6 +386,135 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/04/swift总结第七课/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="承霖">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/touxiang.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="承霖的书房">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/07/04/swift总结第七课/" itemprop="url">swift总结第七课</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-04T19:56:11+08:00">
+                2017-07-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="背单词："><a href="#背单词：" class="headerlink" title="背单词："></a>背单词：</h2><p>hierachy：层次、层系</p>
+<p>navigation controller</p>
+<p>tableview：</p>
+<p>teminology：专有名词</p>
+<p>toggle：切换</p>
+<p>anatomy：剖析</p>
+<p>span：跨度</p>
+<p>cosmetic：表面的</p>
+<hr>
+<p>TableView：</p>
+<p>table：在cell里面展示数据。</p>
+<p>cell：与row有关，但不相同。cell是一个视图（view），这个view可以展示一排（row）的数据。</p>
+<p>通俗理解：</p>
+<p>cell是展示一排一排数据的载体，row可能有很多，但cell就是屏幕展示的那些。</p>
+<p>checkmark是一种tableviewcell內建的view（accessory）</p>
+<p>reuse identifier：重用标识符，当滚动屏幕的时候，tableview将会去找空闲的cell去复用，以用于展示新的row。</p>
+<p>每一个cell，都可以有自己的重用标识符的类型，可以是image、button、label等，所以实际应用环境中，我们需要设定不同cell的类型，以便可以在滚动的时候，使用正确的cell类型来复用。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -&gt; Int &#123;</div><div class="line">        return 1</div><div class="line">    &#125;</div><div class="line">// 定义了一个tableView的方法，有2个参数，返回值是int类型</div><div class="line">// tableview有2种delegate，一种是delegate，一种是data source，它们都是protocols，data source是连接data和tableview的桥梁，这里view controller充当data source的作用，tableview只能与它对话，并不能直接与data对话。</div><div class="line">// numberOfRowsInSection，它将告诉tableview一共有几rows数据</div><div class="line">// return非常重要，它可以让method send data back to its caller，在这里caller is UITableView</div><div class="line"></div><div class="line">    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -&gt; UITableViewCell &#123;</div><div class="line">        let cell = tableView.dequeueReusableCell(withIdentifier: &quot;ChecklistItem&quot;, for: indexPath)</div><div class="line">        </div><div class="line">//dequeueReusableCell，获取tableview的复用属性，指定是identifier(如果刚刚我们才指定了第一个cell的type，for 上面得到的indexpath)</div><div class="line">        return cell</div><div class="line">    &#125;</div><div class="line">// cellForRowAt 获得一个cell for that row，这个method完成了以后，返回了cell给tableview </div><div class="line">// IndexPath 是什么？</div><div class="line">它是一个object，这个object指向了在table中一个具体的row，当tableview找data source要cell的时候，可以在indexPath.row里面看到行号</div></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/03/swift总结第六课/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -475,7 +604,10 @@
 <p>某些人用过了才知道[^注释]</p>
 <p>[^注释]: Somebodythat I used to know.</p>
 <hr>
-<h3 id="swift学习"><a href="#swift学习" class="headerlink" title="swift学习"></a>swift学习</h3>
+<h3 id="swift学习"><a href="#swift学习" class="headerlink" title="swift学习:"></a>swift学习:</h3><h4 id="背单词："><a href="#背单词：" class="headerlink" title="背单词："></a>背单词：</h4><p>rite：礼仪、仪式</p>
+<p>versatile：多功能的，多才多艺的</p>
+<p>hierachy：层级、层次</p>
+
           
         
       
@@ -1323,118 +1455,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/27/ubuntu-dns小知识/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="承霖">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/touxiang.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="承霖的书房">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/06/27/ubuntu-dns小知识/" itemprop="url">ubuntu-dns</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-27T07:28:30+08:00">
-                2017-06-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>ubuntu reboot以后会自动清空/etc/resolv.conf<br>默认的内容则来自于/etc/resolvconf/resolv.conf.d/base，将要添加的内容配置在这个文件即可在每次重启服务的时候重置nameserver，如nameserver 192.168.1.2</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1484,7 +1504,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-count">16</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -1565,7 +1585,7 @@
 </div>
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共8.5k字</span>
+  <span class="post-count">博客全站共9.0k字</span>
 </div>
 
         
